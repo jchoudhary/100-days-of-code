@@ -43,8 +43,7 @@ public class TwoNumAddition {
         sc.close();
 
         //Calling add method
-        Solution sol = new Solution();
-        ListNode l3 = sol.addTwoNumbers(l1, l2);
+        ListNode l3 = addTwoNumbers(l1, l2);
 
         ListNode current = l3;
         while (current != null) {
@@ -52,18 +51,8 @@ public class TwoNumAddition {
             current = current.next;
         }
     }
-}
 
-class ListNode {
-    int val;
-    ListNode next;
-    ListNode() {}
-    ListNode(int val) { this.val = val; }
-    ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-}
-
-class Solution {
-    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+    private static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode current1 = l1.next;
         ListNode current2 = l2.next;
 
